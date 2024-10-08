@@ -93,7 +93,7 @@ public class App
             // Create string for SQL statement
             String strSelect =
                     "SELECT emp_no, first_name, last_name, title, salary"
-                            + "FROM employees JOIN titles ON emp_no = titles.emp_no JOIN salaries ON emp_no = salaries.emp_no"
+                            + "FROM employees JOIN titles ON employees.emp_no = titles.emp_no JOIN salaries ON employees.emp_no = salaries.emp_no"
                             + "WHERE emp_no = " + ID;
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
